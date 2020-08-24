@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Książka Telefoniczna</title>
+    <style>
+        div.modalEdit {
+            display: none;
+            width: 500px;
+            height: 200px;
+            background-color: lightblue;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid black;
+            text-align: center;
+
+        }
+
+
+
+        .center {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .center button {
+            margin-top: 37px;
+        }
+
+        div.modalEdit.active {
+            display: block;
+
+        }
+
+
+        .form.blur {
+            filter: blur(2px);
+
+        }
+
+        ul.blur {
+            filter: blur(2px);
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+            font-family: arial;
+            font-size: 30px;
+            background-color: #fff;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid black;
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <form class="form">
+
+        <div>
+            <label for="text">Imię</label>
+            <input id="name" type="text" placeholder="Wpisz imię">
+        </div>
+        <div>
+            <label for="tet">Nazwisko</label>
+            <input id="surname" type="text" placeholder="Wpisz nazwisko">
+        </div>
+        <div>
+            <label for="text">Numer telefonu</label>
+            <input id="phone" type="number" placeholder="Wpisz number telefonu">
+        </div>
+        <button class="add">Dodaj kontakt</button>
+
+    </form>
+
+    <ul class="ul"></ul>
+
+
+
+
+    <div class="modalEdit"><span>x</span>
+        <div class="center">
+
+            <label for="text">Imię:</label>
+            <input class="name" type="text" placeholder="Wpisz imię">
+            <br>
+
+            <label for="text">Nazwisko:</label>
+            <input class="surname" type="text" placeholder="Wpisz nazwisko">
+            <br>
+            <label for="text">Numer telefonu:</label><input class="phone" id="phone" type="number"
+                placeholder="Wpisz number telefonu">
+            <br>
+            <button class="submitBtn">Zatwierdź</button>
+            <button class="cancelBtn">Anuluj</button>
+        </div>
+
+    </div>
+
+
+    <script src="js.js"></script>
+</body>
+
+</html>
